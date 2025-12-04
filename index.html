@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA166 — Tu IA Violeta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💜 IA166 — Tu IA Violeta</h1>
+        <h3>
+            Consejos, frases inspiradoras, ayuda en momentos difíciles, y mucho más. Tu IA personal, siempre contigo.
+        </h3>
+
+        <!-- Selector de ánimo -->
+        <div class="card">
+            <h2>¿Cómo te sentís hoy?</h2>
+            <select id="emotion" onchange="setMood(this.value)">
+                <option value="feliz">😊 Feliz</option>
+                <option value="neutral">😐 Neutral</option>
+                <option value="triste">😔 Triste</option>
+                <option value="normal">🤖 Normal</option>
+            </select>
+        </div>
+
+        <!-- Chat -->
+        <div class="card">
+            <h2>Chat IA166</h2>
+            <div id="chatBox" class="card" style="height: 260px; overflow-y:auto;"></div>
+            <input id="userInput" placeholder="Preguntá lo que quieras... (emociones, consejos, frases)">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+
+        <!-- Sección para agregar consejos -->
+        <div class="card">
+            <h2>Agregar un consejo o pensamiento</h2>
+            <textarea id="newAdvice" placeholder="Escribí un consejo..."></textarea>
+            <button onclick="addAdvice()">Agregar</button>
+            <h3>Consejos de la comunidad:</h3>
+            <div id="communityList"></div>
+        </div>
+
+        <div class="footer-note">
+            Esta IA fue creada para la materia NTICX de la profe Nancy Darre. ¡Faltan muchas cosas, pero todo se puede mejorar! 💜
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
